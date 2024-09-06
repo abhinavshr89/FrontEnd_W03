@@ -23,10 +23,10 @@ const BrandsPage = () => {
                 ease: 'power3.out',
                 scrollTrigger: {
                     trigger: '.brand-text', 
-                    start: 'top 80%', 
+                    start: 'top 100%', 
                     end: 'bottom 50%', 
                     scrub: false, 
-                    markers:true,
+                   
                     toggleActions: 'play pause resume reset'
                 },
             }
