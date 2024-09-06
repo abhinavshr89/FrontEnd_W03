@@ -28,9 +28,8 @@ const BrandsPage = () => {
                 </div>
                 <div className='bg-black h-[1px] w-full mt-3'></div>
             </div>
-
+            {/* for larger screens */}
             <div className='max-sm:hidden text-[30px] md:text-[4vw] leading-[40px] md:leading-[4vw] font-nb flex flex-col justify-center w-full mt-[20px] brand-text'>
-
                 <span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;We are a venture firm and digital agency
                     Our</span> <span> mission is to transform founders' visions into</span>
                 <span>remarkable brands. Choose traditional</span> <span>compensation or an equity offset through our</span>

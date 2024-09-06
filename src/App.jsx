@@ -49,7 +49,7 @@ const App = () => {
       <main className='main w-full h-full relative overflow-hidden'>
         <div
           id='cursor'
-          className='h-[7vw] w-[7vw] rounded-full bg-black text-white bg-opacity-50 absolute z-idx flex items-center justify-center
+          className='max-sm:hidden h-[7vw] w-[7vw] rounded-full bg-black text-white bg-opacity-50 absolute z-idx flex items-center justify-center
          text-[20px] font-nb'
         >
           play reel
