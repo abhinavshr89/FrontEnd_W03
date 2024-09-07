@@ -4,7 +4,7 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { useGSAP } from '@gsap/react';
 
 const BrandsPage = () => {
-  useEffect(() => {
+  useGSAP(() => {
     gsap.registerPlugin(ScrollTrigger);
 
     gsap.fromTo(
@@ -45,7 +45,7 @@ const BrandsPage = () => {
         },
       }
     );
-  }, []);
+  });
 
   return (
     <section className='padding-x'>
