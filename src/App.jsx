@@ -10,52 +10,52 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import gsap from 'gsap';
 
 const App = () => {
-  const scrollContainerRef = useRef(null);
-  const locomotiveScrollInstance = useRef(null);
+  // const scrollContainerRef = useRef(null);
+  // const locomotiveScrollInstance = useRef(null);
 
-  useEffect(() => {
-    gsap.registerPlugin(ScrollTrigger);
+  // useEffect(() => {
+  //   gsap.registerPlugin(ScrollTrigger);
 
-    // Initialize Locomotive Scroll using ref
-    locomotiveScrollInstance.current = new LocomotiveScroll({
-      el: scrollContainerRef.current, // Use the ref here
-      smooth: true,
-    });
+  //   // Initialize Locomotive Scroll using ref
+  //   locomotiveScrollInstance.current = new LocomotiveScroll({
+  //     el: scrollContainerRef.current, // Use the ref here
+  //     smooth: true,
+  //   });
 
-    // Sync Locomotive Scroll with ScrollTrigger
-    locomotiveScrollInstance.current.on('scroll', ScrollTrigger.update);
+  //   // Sync Locomotive Scroll with ScrollTrigger
+  //   locomotiveScrollInstance.current.on('scroll', ScrollTrigger.update);
 
-    ScrollTrigger.scrollerProxy(scrollContainerRef.current, {
-      scrollTop(value) {
-        return arguments.length
-          ? locomotiveScrollInstance.current.scrollTo(value, 0, 0)
-          : locomotiveScrollInstance.current.scroll.instance.scroll.y;
-      },
-      getBoundingClientRect() {
-        return {
-          top: 0,
-          left: 0,
-          width: window.innerWidth,
-          height: window.innerHeight,
-        };
-      },
-      pinType: scrollContainerRef.current.style.transform ? 'transform' : 'fixed',
-    });
+  //   ScrollTrigger.scrollerProxy(scrollContainerRef.current, {
+  //     scrollTop(value) {
+  //       return arguments.length
+  //         ? locomotiveScrollInstance.current.scrollTo(value, 0, 0)
+  //         : locomotiveScrollInstance.current.scroll.instance.scroll.y;
+  //     },
+  //     getBoundingClientRect() {
+  //       return {
+  //         top: 0,
+  //         left: 0,
+  //         width: window.innerWidth,
+  //         height: window.innerHeight,
+  //       };
+  //     },
+  //     pinType: scrollContainerRef.current.style.transform ? 'transform' : 'fixed',
+  //   });
 
-    // Refresh ScrollTrigger after Locomotive Scroll initialization
-    ScrollTrigger.addEventListener('refresh', () =>
-      locomotiveScrollInstance.current.update()
-    );
-    ScrollTrigger.refresh();
+  //   // Refresh ScrollTrigger after Locomotive Scroll initialization
+  //   ScrollTrigger.addEventListener('refresh', () =>
+  //     locomotiveScrollInstance.current.update()
+  //   );
+  //   ScrollTrigger.refresh();
 
-    // Cleanup on unmount
-    return () => {
-      if (locomotiveScrollInstance.current) {
-        locomotiveScrollInstance.current.destroy();
-      }
-      ScrollTrigger.removeEventListener('refresh', locomotiveScrollInstance.current.update);
-    };
-  }, []);
+  //   // Cleanup on unmount
+  //   return () => {
+  //     if (locomotiveScrollInstance.current) {
+  //       locomotiveScrollInstance.current.destroy();
+  //     }
+  //     ScrollTrigger.removeEventListener('refresh', locomotiveScrollInstance.current.update);
+  //   };
+  // }, []);
 
   // Custom cursor functionality
   useEffect(() => {
@@ -101,8 +101,7 @@ const App = () => {
       <main
         id="main"
         className="w-full relative overflow-hidden select-none"
-        ref={scrollContainerRef} // Ref here for Locomotive Scroll
-        data-scroll-container // Locomotive Scroll needs this attribute
+       
       >
         <div
           id="cursor"

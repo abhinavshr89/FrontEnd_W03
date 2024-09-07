@@ -21,7 +21,7 @@ const BrandsPage = () => {
         ease: 'power3.out',
         scrollTrigger: {
           trigger: '.brand-text',
-          scroller: '#main', 
+          scroller: 'body', 
           start: 'top 100%',
           end: 'bottom 50%',
           scrub: false,
