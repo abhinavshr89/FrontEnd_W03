@@ -25,7 +25,7 @@ const BrandsPage = () => {
           start: 'top 100%',
           end: 'bottom 50%',
           scrub: false,
-          markers:true,
+          
           toggleActions: 'play pause resume reset',
         },
       }
