@@ -1,9 +1,10 @@
 import React, { useEffect } from 'react';
-import Hero from './sections/Hero';
 import gsap from 'gsap';
+import Hero from './sections/Hero';
+import Philosophy from './sections/Philosophy';
 import BrandsPage from './sections/BrandsPage';
-import Services from './sections/Services';
 import VideoPage from './sections/VideoPage';
+import Services from './sections/Services';
 const App = () => {
   useEffect(() => {
     const cursor = document.getElementById("cursor");
@@ -72,6 +73,9 @@ const App = () => {
 
         <section className='w-full bg-heading-white  '>
           <VideoPage/>
+        </section>
+        <section className='w-full h-[100vh] bg-heading-white  '>
+          <Philosophy/>
         </section>
       </main>
     </>

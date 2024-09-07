@@ -24,6 +24,7 @@
   .mod-span{
     display: inline-block;
   }
+  
   @layer components {
     .max-container {
       max-width: 1440px;
@@ -72,6 +73,9 @@
     }
     .z-idx{
       z-index: 9;
+    }
+    .heading-text{
+      @apply max-sm:text-[4vw] text-[2vw];
     }
   }
   
