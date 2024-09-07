@@ -4,48 +4,48 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { useGSAP } from '@gsap/react';
 
 const BrandsPage = () => {
-//   useGSAP(() => {
-//     gsap.registerPlugin(ScrollTrigger);
+  useGSAP(() => {
+    gsap.registerPlugin(ScrollTrigger);
 
-//     gsap.fromTo(
-//       '.brand-text span',
-//       {
-//         y: 100,
-//         opacity: 0,
-//       },
-//       {
-//         y: 0,
-//         opacity: 1,
-//         duration: 0.8,
-//         stagger: 0.3,
-//         ease: 'power3.out',
-//         scrollTrigger: {
-//           trigger: '.brand-text',
-//           scroller: '#main', 
-//           start: 'top 100%',
-//           end: 'bottom 50%',
-//           scrub: false,
-//           toggleActions: 'play pause resume reset',
-//         },
-//       }
-//     );
+    gsap.fromTo(
+      '.brand-text span',
+      {
+        y: 100,
+        opacity: 0,
+      },
+      {
+        y: 0,
+        opacity: 1,
+        duration: 0.8,
+        stagger: 0.3,
+        ease: 'power3.out',
+        scrollTrigger: {
+          trigger: '.brand-text',
+          scroller: '#main', 
+          start: 'top 100%',
+          end: 'bottom 50%',
+          scrub: false,
+          toggleActions: 'play pause resume reset',
+        },
+      }
+    );
 
-//     gsap.fromTo(
-//       '#brand-line',
-//       {
-//         width: '50%',
-//       },
-//       {
-//         width: '100%',
-//         duration: 1,
-//         scrollTrigger: {
-//           trigger: '#brand-line',
-//           scroller: '#main', // Again, specifying the custom scroller
-//           start: 'top 100%',
-//         },
-//       }
-//     );
-//   });
+    gsap.fromTo(
+      '#brand-line',
+      {
+        width: '50%',
+      },
+      {
+        width: '100%',
+        duration: 1,
+        scrollTrigger: {
+          trigger: '#brand-line',
+          scroller: '#main', // Again, specifying the custom scroller
+          start: 'top 100%',
+        },
+      }
+    );
+  });
 
   return (
     <section className='padding-x'>
